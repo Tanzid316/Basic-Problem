@@ -1,0 +1,36 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+
+int main()
+{
+    int i,searching,counts=0,flag=0,arr[] = {10,30,20,50,40};
+
+    for(i=0; i<5; i++)
+    {
+        printf("%d ",arr[i]);
+    }
+
+    printf("\nEnter your number : ");
+    scanf("%d",&searching);
+
+    for(i=0; i<5; i++)
+    {
+        if(searching == arr[i])
+        {
+            counts = i;
+            flag = 1;
+        }
+    }
+
+    if(flag ==1)
+    {
+        printf("Index number : %d",counts);
+    }
+    else
+    {
+        printf("Your number = %d is not found.",searching);
+    }
+
+    return 0;
+}
